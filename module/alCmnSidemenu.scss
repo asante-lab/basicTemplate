@@ -1,0 +1,129 @@
+.alCmnSidemenu {
+  // レスポンシブ対応、大きい幅の場合は非表示
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.alCmnSidemenu_Selected {
+  color: #fff;
+}
+
+.alCmnSidemenu_Unselected {
+  color: #333;
+}
+
+//----------------------------
+// ハンバーガーメニュー
+//----------------------------
+
+// ボタンデザイン (初期状態)
+.openbtn {
+  position: fixed;
+  z-index: 101; // g-nav の数値より大きく
+  top: 18px;
+  right: 4%;
+  background-color: #dc2f3c;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  > span {
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    left: 11px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    width: 25px;
+    &:nth-of-type(1) {
+      top: 15px;
+    }
+    &:nth-of-type(2) {
+      top: 28px;
+    }
+  }
+}
+
+// ボタンデザイン (アクティブ状態)
+.openbtn.active {
+  > span {
+    left: 11px;
+    width: 27px;
+    &:nth-of-type(1) {
+      top: 16px;
+      transform: translateY(6px) rotate(-45deg);
+    }
+    &:nth-of-type(2) {
+      top: 28px;
+      transform: translateY(-6px) rotate(45deg);
+    }
+  }
+}
+
+// ガイドナビ
+#g-nav {
+  position: fixed;
+  z-index: 100;
+
+  // ナビのスタート位置と形状
+  top: 0;
+  right: -120%;
+  width: 10rem;
+  height: 19.5rem;
+  background: #c8c8c8;
+  border-radius: 0 0 0 16px / 0 0 0 16px;
+
+  // 動き
+  transition: all 0.6s;
+}
+
+// アクティブクラスがついたら位置補正に
+#g-nav.panelactive {
+  right: 0;
+}
+
+// ナビゲーションデザイン
+#g-nav {
+  // 1段目 全体
+  > ul {
+    // ナビゲーション天地中央揃え
+    position: absolute;
+    z-index: 100;
+    padding-left: 0;
+    width: 6rem;
+    top: 10rem;
+    left: 5.5rem;
+    transform: translate(-50%, -50%);
+
+    // 1段目 項目
+    > li {
+      list-style: none;
+      text-align: left;
+      > a {
+        text-decoration: none;
+        display: block;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+      }
+
+      // 2段目 全体
+      > ul {
+        > li {
+          list-style: none;
+          padding-left: 0;
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      > li > a {
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+    }
+  }
+}

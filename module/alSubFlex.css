@@ -1,0 +1,40 @@
+.alSubFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  border: 2px #e0e0e0 dashed;
+}
+.alSubFlex > div {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.alSubFlex > div > div {
+  width: 45%;
+  height: 10svh;
+  background-color: #f06a74;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .alSubFlex {
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .alSubFlex {
+    padding-bottom: 1rem;
+  }
+  .alSubFlex > div {
+    flex-direction: column;
+  }
+  .alSubFlex > div > div {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}

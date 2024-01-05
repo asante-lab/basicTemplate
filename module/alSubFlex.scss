@@ -1,0 +1,42 @@
+.alSubFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+
+    // デバッグ用 境界表示
+    border: 2px #e0e0e0 dashed;
+
+    // Flexbox
+    > div {
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        > div {
+            width: 45%;
+            height: 10svh;
+            background-color: #f06a74;
+            margin: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    // レスポンシブ対応
+    @media (min-width: 768px) and (max-width: 1023px) {
+        padding-bottom: 2rem;
+    }
+    @media (max-width: 767px) {
+        padding-bottom: 1rem;
+        > div {
+            flex-direction: column;
+            > div {
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+    }
+}

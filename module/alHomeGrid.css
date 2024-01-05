@@ -1,0 +1,39 @@
+.alHomeGrid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+  border: 2px #e0e0e0 dashed;
+}
+.alHomeGrid > div {
+  margin-top: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+.alHomeGrid > div > div {
+  width: 100%;
+  height: 10svh;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .alHomeGrid {
+    padding-bottom: 2.5rem;
+  }
+  .alHomeGrid > div {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .alHomeGrid {
+    padding-bottom: 2rem;
+  }
+  .alHomeGrid > div {
+    grid-template-columns: 1fr;
+  }
+}

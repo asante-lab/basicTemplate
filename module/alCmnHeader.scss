@@ -1,0 +1,90 @@
+.alCmnHeader {
+    background-color: #f2f2f2;
+    opacity: 92%;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    border-bottom: 2px solid white;
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        // 左側ロゴ
+        > div:first-of-type {
+            > h1 {
+                margin: auto 0;
+                > a > img {
+                    margin: 16px auto auto;
+                }
+            }
+        }
+
+        // 右側メニュー
+        > div:last-of-type {
+            > ul {
+                display: flex;
+                list-style: none;
+                background-color: white;
+                height: 40px;
+                padding-left: 0;
+
+                > li {
+                    font-weight: bold;
+                    > a {
+                        display: block;
+                        padding: 8px 20px;
+                        text-align: center;
+                        color: #424242;
+                    }
+                    > ul {
+                        background-color: #f0f0f0;
+                        list-style: none;
+                        padding-left: 0;
+                        padding-bottom: 8px;
+                        border-radius: 0 0 8px 8px;
+                        > li {
+                            padding-top: 6px;
+                            text-align: center;
+                        }
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                    }
+                    &:hover {
+                        > ul {
+                            opacity: 100%;
+                            transition: all 1s ease;
+                        }
+                    }
+                }
+            }
+        }
+
+        // レスポンシブ対応
+        @media (max-width: 767px) {
+            > div:last-of-type {
+                display: none;
+            }
+            justify-content: flex-start;
+        }
+    }
+}
+
+.alCmnHeader_Selected {
+    background-color: #f06a74;
+    > a {
+        color: #f2f2f2 !important;
+    }
+}
+
+.alCmnHeader_Focused {
+    transition: all 0.5s ease;
+    &:hover {
+        background-color: #f06a74;
+        transition: all 0.5s ease;
+    }
+}

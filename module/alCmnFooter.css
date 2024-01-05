@@ -1,0 +1,31 @@
+.alCmnFooter {
+  width: 100%;
+  height: 80px;
+  margin-top: 4rem;
+  background-color: #f06a74;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alCmnFooter > a > p {
+  text-indent: 0;
+  color: #eeeeee;
+  text-align: center;
+  margin: 0 auto;
+}
+.alCmnFooter > a > p:first-of-type {
+  font-size: 20px;
+}
+.alCmnFooter > a > p:nth-of-type(2) {
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+.alCmnFooter > a > p:nth-of-type(2) > span {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 2px;
+}

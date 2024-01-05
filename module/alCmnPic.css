@@ -1,0 +1,13 @@
+.alCmnPic {
+  width: 100%;
+  height: calc(60svh - 80px);
+  margin-top: 80px;
+  background-image: url("../img/alTemplatePicture.svg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+@media (max-width: 767px) {
+  .alCmnPic {
+    height: calc(50svh - 80px);
+  }
+}

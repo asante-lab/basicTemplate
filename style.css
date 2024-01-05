@@ -1,0 +1,108 @@
+/****************************************
+  Theme Name: Asante Lab Basic Template
+  Theme URI: https://asante-lab.com/
+  Author: Asante
+  Author URI: https://asante-lab.com/
+  Description: Asante Lab Products
+  Version: 0.1
+ ****************************************/
+html {
+  font-family: "Noticia Text", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #424242;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 4rem auto 1rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 2.5rem;
+    margin: 3rem auto 1rem;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+    margin: 2.5rem auto 0.75rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 3rem auto 1rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  h2 {
+    font-size: 2rem;
+    margin: 2.5rem auto 0.75rem;
+  }
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 1.75rem;
+    margin: 2rem auto 0.75rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem auto 1rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  h3 {
+    font-size: 1.25rem;
+    margin: 1.75rem auto 0.75rem;
+  }
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: 1rem;
+    margin: 1.5rem auto 0.5rem;
+  }
+}
+
+a {
+  color: #424242;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+a:hover {
+  opacity: 50%;
+  transition: all 0.5s ease;
+}
+
+p {
+  text-indent: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.alCmnInbox {
+  width: 92%;
+  max-width: 1440px;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .alCmnInbox {
+    width: 90%;
+  }
+}
+
+#alSplash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  background: #f6f4ec;
+  text-align: center;
+  top: 0;
+}

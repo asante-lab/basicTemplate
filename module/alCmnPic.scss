@@ -1,0 +1,15 @@
+.alCmnPic {
+  width: 100%;
+  // Top Header 高さ調整
+  height: calc(60svh - 80px);
+  margin-top: 80px;
+
+  // 背景画設定
+  background-image: url("../img/alTemplatePicture.svg");
+  background-size: cover;
+  background-position: 50% 50%;
+
+  @media (max-width: 767px) {
+    height: calc(50svh - 80px);
+  }
+}

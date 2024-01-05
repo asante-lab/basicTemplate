@@ -1,0 +1,101 @@
+@media screen and (min-width: 768px) {
+  .alCmnSidemenu {
+    display: none;
+  }
+}
+
+.alCmnSidemenu_Selected {
+  color: #fff;
+}
+
+.alCmnSidemenu_Unselected {
+  color: #333;
+}
+
+.openbtn {
+  position: fixed;
+  z-index: 101;
+  top: 18px;
+  right: 4%;
+  background-color: #dc2f3c;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.openbtn > span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 11px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+  width: 25px;
+}
+.openbtn > span:nth-of-type(1) {
+  top: 15px;
+}
+.openbtn > span:nth-of-type(2) {
+  top: 28px;
+}
+
+.openbtn.active > span {
+  left: 11px;
+  width: 27px;
+}
+.openbtn.active > span:nth-of-type(1) {
+  top: 16px;
+  transform: translateY(6px) rotate(-45deg);
+}
+.openbtn.active > span:nth-of-type(2) {
+  top: 28px;
+  transform: translateY(-6px) rotate(45deg);
+}
+
+#g-nav {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: -120%;
+  width: 10rem;
+  height: 19.5rem;
+  background: #c8c8c8;
+  border-radius: 0 0 0 16px/0 0 0 16px;
+  transition: all 0.6s;
+}
+
+#g-nav.panelactive {
+  right: 0;
+}
+
+#g-nav > ul {
+  position: absolute;
+  z-index: 100;
+  padding-left: 0;
+  width: 6rem;
+  top: 10rem;
+  left: 5.5rem;
+  transform: translate(-50%, -50%);
+}
+#g-nav > ul > li {
+  list-style: none;
+  text-align: left;
+}
+#g-nav > ul > li > a {
+  text-decoration: none;
+  display: block;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+#g-nav > ul > li > ul > li {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4px;
+}
+@media screen and (max-width: 767px) {
+  #g-nav > ul > li > a {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}

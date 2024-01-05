@@ -1,0 +1,78 @@
+.alCmnHeader {
+  background-color: #f2f2f2;
+  opacity: 92%;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+  border-bottom: 2px solid white;
+}
+.alCmnHeader > div {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.alCmnHeader > div > div:first-of-type > h1 {
+  margin: auto 0;
+}
+.alCmnHeader > div > div:first-of-type > h1 > a > img {
+  margin: 16px auto auto;
+}
+.alCmnHeader > div > div:last-of-type > ul {
+  display: flex;
+  list-style: none;
+  background-color: white;
+  height: 40px;
+  padding-left: 0;
+}
+.alCmnHeader > div > div:last-of-type > ul > li {
+  font-weight: bold;
+}
+.alCmnHeader > div > div:last-of-type > ul > li > a {
+  display: block;
+  padding: 8px 20px;
+  text-align: center;
+  color: #424242;
+}
+.alCmnHeader > div > div:last-of-type > ul > li > ul {
+  background-color: #f0f0f0;
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 8px;
+  border-radius: 0 0 8px 8px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.alCmnHeader > div > div:last-of-type > ul > li > ul > li {
+  padding-top: 6px;
+  text-align: center;
+}
+.alCmnHeader > div > div:last-of-type > ul > li:hover > ul {
+  opacity: 100%;
+  transition: all 1s ease;
+}
+@media (max-width: 767px) {
+  .alCmnHeader > div {
+    justify-content: flex-start;
+  }
+  .alCmnHeader > div > div:last-of-type {
+    display: none;
+  }
+}
+
+.alCmnHeader_Selected {
+  background-color: #f06a74;
+}
+.alCmnHeader_Selected > a {
+  color: #f2f2f2 !important;
+}
+
+.alCmnHeader_Focused {
+  transition: all 0.5s ease;
+}
+.alCmnHeader_Focused:hover {
+  background-color: #f06a74;
+  transition: all 0.5s ease;
+}
