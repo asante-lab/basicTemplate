@@ -4,7 +4,7 @@
 
     <div class="alCmnInbox">
 
-        <!-- 左側、あさんてロゴ -->
+        <!-- 左側、ロゴ -->
         <div>
             <h1>
                 <a href="<?php if ($args == 'home') {
