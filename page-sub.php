@@ -39,7 +39,7 @@
     ------------------------ -->
 
     <!-- JS/上下スクロール -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/alVerticalScroll.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/alCmnVerticalScroll.js"></script>
     <script>
         new WOW().init();
     </script>
